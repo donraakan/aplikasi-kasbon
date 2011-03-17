@@ -1,4 +1,4 @@
-package com.artivisi.aplikasi.kasbon;
+package com.artivisi.aplikasi.kasbon.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,5 +1,7 @@
 # Eclipse
 .settings
+.project
+.classpath
 .metadata
 Servers
 bin

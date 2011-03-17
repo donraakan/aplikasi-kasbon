@@ -1,4 +1,4 @@
-package com.artivisi.aplikasi.kasbon;
+package com.artivisi.aplikasi.kasbon.domain;
 
 import java.math.BigDecimal;
 import java.util.Date;

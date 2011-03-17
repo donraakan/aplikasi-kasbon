@@ -1,4 +1,4 @@
-package com.artivisi.aplikasi.kasbon;
+package com.artivisi.aplikasi.kasbon.domain;
 
 import java.math.BigDecimal;
 
@@ -11,27 +11,21 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
-
 @Entity
 @Table
-public class PembayaranKasbon {
+public class Saldo {
+	
 	 @Id @GeneratedValue(generator="system-uuid")
   	 @GenericGenerator(name="system-uuid",strategy="uuid")
   	 private String id;
 	
 	 
-	 @Column (name="tanggal_bayar")
-	 private String tanggalBayar;
-	 
 	 @Column (name="pegawai")
 	 @ManyToOne
 	 private Pegawai pegawai;
 	 
-	 @Column (name="nilai_bayar")
-	 private BigDecimal nilaiBayar;
-	 
-	 @Column (name="keterangan")
-	 private String keterangan;
+	 @Column (name="saldo")
+	 private BigDecimal saldo;
 
 	public String getId() {
 		return id;
@@ -39,14 +33,6 @@ public class PembayaranKasbon {
 
 	public void setId(String id) {
 		this.id = id;
-	}
-
-	public String getTanggalBayar() {
-		return tanggalBayar;
-	}
-
-	public void setTanggalBayar(String tanggalBayar) {
-		this.tanggalBayar = tanggalBayar;
 	}
 
 	public Pegawai getPegawai() {
@@ -57,26 +43,13 @@ public class PembayaranKasbon {
 		this.pegawai = pegawai;
 	}
 
-	public BigDecimal getNilaiBayar() {
-		return nilaiBayar;
+	public BigDecimal getSaldo() {
+		return saldo;
 	}
 
-	public void setNilaiBayar(BigDecimal nilaiBayar) {
-		this.nilaiBayar = nilaiBayar;
+	public void setSaldo(BigDecimal saldo) {
+		this.saldo = saldo;
 	}
-
-	public String getKeterangan() {
-		return keterangan;
-	}
-
-	public void setKeterangan(String keterangan) {
-		this.keterangan = keterangan;
-	}
-	
-	
-	
-	
-	
 	
 	
 	
