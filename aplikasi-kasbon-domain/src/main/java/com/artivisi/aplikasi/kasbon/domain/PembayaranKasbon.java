@@ -13,7 +13,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 
 @Entity
-@Table
+@Table(name="pembayaran_kasbon")
 public class PembayaranKasbon {
 	 @Id @GeneratedValue(generator="system-uuid")
   	 @GenericGenerator(name="system-uuid",strategy="uuid")
@@ -23,7 +23,6 @@ public class PembayaranKasbon {
 	 @Column (name="tanggal_bayar")
 	 private String tanggalBayar;
 	 
-	 @Column (name="pegawai")
 	 @ManyToOne
 	 private Pegawai pegawai;
 	 

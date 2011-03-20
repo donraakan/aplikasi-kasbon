@@ -12,15 +12,13 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table
+@Table(name="saldo")
 public class Saldo {
 	
 	 @Id @GeneratedValue(generator="system-uuid")
   	 @GenericGenerator(name="system-uuid",strategy="uuid")
   	 private String id;
 	
-	 
-	 @Column (name="pegawai")
 	 @ManyToOne
 	 private Pegawai pegawai;
 	 

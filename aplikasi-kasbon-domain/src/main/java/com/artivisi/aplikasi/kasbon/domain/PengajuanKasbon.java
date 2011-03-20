@@ -13,7 +13,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table
+@Table(name="pengajuan_kasbon")
 public class PengajuanKasbon {
 	 @Id @GeneratedValue(generator="system-uuid")
   	 @GenericGenerator(name="system-uuid",strategy="uuid")
@@ -25,14 +25,14 @@ public class PengajuanKasbon {
 	 @Column (name="keterangan")
 	 private String keterangan;
 	 
-	 @Column (name="approval-kasbon")
-	 private boolean approve; 
+	 @Column (name="approval_kasbon")
+	 private boolean approve;
+	 
 	 private Date tglApprove;
 	 
 	 @Column (name="tanggal")
 	 private String tanggal;
 	 
-	 @Column (name="pegawai")
 	 @ManyToOne
 	 private Pegawai pegawai;
 	 
