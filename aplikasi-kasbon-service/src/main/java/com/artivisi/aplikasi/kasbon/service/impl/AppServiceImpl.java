@@ -3,9 +3,9 @@ package com.artivisi.aplikasi.kasbon.service.impl;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.CreateKeySecondPass;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.artivisi.aplikasi.kasbon.domain.Pegawai;
 import com.artivisi.aplikasi.kasbon.domain.PembayaranKasbon;
@@ -13,18 +13,20 @@ import com.artivisi.aplikasi.kasbon.domain.PengajuanKasbon;
 import com.artivisi.aplikasi.kasbon.service.AppService;
 
 @Service("AppService")
+@Transactional(readOnly=true)
 public class AppServiceImpl implements AppService {
 
 	@Autowired
 	SessionFactory sessionFactory;
 
 	@Override
+	@Transactional(readOnly=false)
 	public void savePegawai(Pegawai pgw) {
 		sessionFactory.getCurrentSession().saveOrUpdate(pgw);
-
 	}
 
-	@Override
+	@Override	a
+	@Transactional(readOnly=false)
 	public void deletePegawai(Pegawai pgw) {
 		sessionFactory.getCurrentSession().delete(pgw);
 	}

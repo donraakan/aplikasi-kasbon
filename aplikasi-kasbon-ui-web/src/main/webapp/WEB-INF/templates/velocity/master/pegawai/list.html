@@ -2,7 +2,12 @@
 <body>
 
      <h2>Daftar Pegawai</h2>
-     <a href="form">tambah</a>
+     <br>
+     <a href="form">tambah</a><br>
+     #if(!$listPegawai || $listPegawai.isEmpty())
+     	<font color="red">Dta Tidak Ada !!!!</font>
+     	#else
+     
 <table cellspacing=0 border=1 width=51%>
 <tr>
 	<th>Kode</th>
@@ -13,15 +18,17 @@
 
 </tr>
 <tr>
-	<td align=center>001</td>
-	<td align=center>deni</td>
-	<td align=center>marketing</td>
-	<td align=center><a href="#">edit</a> | <a href="#">delete</a></td>
+	#foreach($p in $listPegawai)
+	<td align=center>$!p.kode</td>
+	<td align=center>$!p.nama</td>
+	<td align=center>$!p.jabatan</td>
+	<td align=center><a href="form?id=$!p.id">edit</a> | <a href="delete?$!p.id">delete</a></td>
+	#end
 </tr>
 
 </table>
 <br><br>
 halaman : |1|2|3|
-
+#end
 </body>
 </html>
