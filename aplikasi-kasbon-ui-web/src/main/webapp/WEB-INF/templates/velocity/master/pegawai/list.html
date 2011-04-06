@@ -5,7 +5,7 @@
      <br>
      <a href="form">tambah</a><br>
      #if(!$listPegawai || $listPegawai.isEmpty())
-     	<font color="red">Dta Tidak Ada !!!!</font>
+     	<font color="red">Data Tidak Ada !!!!</font>
      	#else
      
 <table cellspacing=0 border=1 width=51%>
@@ -17,14 +17,14 @@
 </tr>
 
 </tr>
-<tr>
 	#foreach($p in $listPegawai)
+<tr>
 	<td align=center>$!p.kode</td>
 	<td align=center>$!p.nama</td>
 	<td align=center>$!p.jabatan</td>
-	<td align=center><a href="form?id=$!p.id">edit</a> | <a href="delete?$!p.id">delete</a></td>
-	#end
+	<td align=center><a href="form?id=$!p.id">edit</a> | <a href="delete?id=$!p.id">delete</a></td>
 </tr>
+	#end
 
 </table>
 <br><br>

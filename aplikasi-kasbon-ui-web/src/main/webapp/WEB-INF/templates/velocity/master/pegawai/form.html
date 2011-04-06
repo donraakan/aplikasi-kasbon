@@ -10,26 +10,26 @@
 <tr>
 <td>Kode Pegawai</td>
 <td>
-<input type="text" nama="kode" value="$!pegawai.kode">
+<input type="text" name="kode" value="$!pegawai.kode">
 <td><font color="red">#springBind("pegawai.kode") #springShowErrors("<br>" "")</font></td>
 </tr>
 
 <tr>
 <td>Nama Pegawai</td>
 <td>
-<input type="text" nama="nama" value="$!pegawai.nama"></td>	
+<input type="text" name="nama" value="$!pegawai.nama"></td>	
 <td><font color="red">#springBind("pegawai.nama") #springShowErrors("<br>" "")</font></td>
-
+</tr>
 <tr>
 <td>Jabatan</td>
 <td>
-<input type="text" nama="jabatan" value="$!pegawai.jabatan"></td>
+<input type="text" name="jabatan" value="$!pegawai.jabatan"></td>
 <td><font color="red">#springBind("pegawai.jabatan") #springShowErrors("<br>" "")</font></td>
-
+</tr>
 </table>
 <br><br>
 <input type="submit" value="simpan">	
-<input type="submit" value="batal">	
+<input type="reset" value="batal">	
 	</form>
 	
 	#end
